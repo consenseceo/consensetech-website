@@ -1,294 +1,169 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="ConsenseTech - Secure, decentralized consent management for the modern web">
-    <meta name="api-base-url" content="https://consense-demo-rnkjb3yahq-uw.a.run.app">
-    <title>ConsenseTech - Secure Consent Management</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Consense Technologies — Court-Ready Consent Evidence</title>
+
+  <!-- API base (optional override from DO env) -->
+  <meta name="api-base-url" content="https://consense-demo-rnkjb3yahq-uw.a.run.app" />
+
+  <link rel="stylesheet" href="./styles.css" />
+  <link rel="icon" href="data:,">
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="container">
-            <div class="nav-content">
-                <div class="logo">
-                    <span class="logo-text">ConsenseTech</span>
-                </div>
-                <ul class="nav-links">
-                    <li><a href="#features">Features</a></li>
-                    <li><a href="#how-it-works">How It Works</a></li>
-                    <li><a href="#use-cases">Use Cases</a></li>
-                    <li><a href="#contact" class="btn-secondary">Contact Us</a></li>
-                </ul>
-                <button class="mobile-menu-toggle" aria-label="Toggle menu">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
-            </div>
-        </div>
-    </nav>
+  <!-- Top Nav -->
+  <header class="nav">
+    <div class="container nav__inner">
+      <a class="brand" href="#">Consense<span class="brand__dot">•</span>Tech</a>
+      <nav class="nav__links">
+        <a href="#how-it-works">How it works</a>
+        <a href="#use-cases">Use cases</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="container">
-            <div class="hero-content">
-                <h1 class="hero-title">
-                    Secure, Decentralized
-                    <span class="gradient-text">Consent Management</span>
-                </h1>
-                <p class="hero-subtitle">
-                    Empower users with transparent, verifiable consent. Built on blockchain technology 
-                    for trust, security, and compliance.
-                </p>
-                <div class="hero-cta">
-                    <a href="#contact" class="btn-primary">Get Started</a>
-                    <a href="#how-it-works" class="btn-outline">Learn More</a>
-                </div>
-                <div class="hero-stats">
-                    <div class="stat">
-                        <div class="stat-number">100%</div>
-                        <div class="stat-label">Verifiable</div>
-                    </div>
-                    <div class="stat">
-                        <div class="stat-number">Zero</div>
-                        <div class="stat-label">Trust Required</div>
-                    </div>
-                    <div class="stat">
-                        <div class="stat-number">∞</div>
-                        <div class="stat-label">Scalable</div>
-                    </div>
-                </div>
-            </div>
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container hero__grid">
+      <div class="hero__copy">
+        <h1>Court-ready consent for real-world transactions.</h1>
+        <p class="lead">
+          Consense Verification Contract (CVC) captures gesture-based liveness,
+          device & location metadata, and signed terms to produce verifiable evidence
+          for approvals, denials, and disputes.
+        </p>
+        <div class="hero__cta">
+          <a class="btn btn--primary" href="#contact">Talk to us</a>
+          <a class="btn btn--ghost" href="#how-it-works">See how it works</a>
         </div>
-        <div class="hero-background">
-            <div class="gradient-orb orb-1"></div>
-            <div class="gradient-orb orb-2"></div>
-            <div class="gradient-orb orb-3"></div>
-        </div>
-    </section>
 
-    <!-- Features Section -->
-    <section id="features" class="features">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Why ConsenseTech?</h2>
-                <p class="section-subtitle">Built for privacy, security, and compliance</p>
-            </div>
-            <div class="features-grid">
-                <div class="feature-card">
-                    <div class="feature-icon">🔒</div>
-                    <h3 class="feature-title">Cryptographically Secure</h3>
-                    <p class="feature-description">
-                        Every consent record is cryptographically signed and verifiable. 
-                        No central authority needed.
-                    </p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">🔗</div>
-                    <h3 class="feature-title">Blockchain-Based</h3>
-                    <p class="feature-description">
-                        Immutable consent records stored on distributed ledger technology 
-                        for permanent audit trails.
-                    </p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">👤</div>
-                    <h3 class="feature-title">User-Controlled</h3>
-                    <p class="feature-description">
-                        Users maintain full control over their consent data. 
-                        Revoke or modify permissions anytime.
-                    </p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">⚡</div>
-                    <h3 class="feature-title">Lightning Fast</h3>
-                    <p class="feature-description">
-                        Optimized for performance with instant verification 
-                        and minimal latency.
-                    </p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">🌍</div>
-                    <h3 class="feature-title">GDPR Compliant</h3>
-                    <p class="feature-description">
-                        Built with privacy regulations in mind. 
-                        Full compliance with GDPR, CCPA, and more.
-                    </p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">🔧</div>
-                    <h3 class="feature-title">Easy Integration</h3>
-                    <p class="feature-description">
-                        Simple APIs and SDKs for seamless integration 
-                        into your existing infrastructure.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
+        <ul class="hero__bullets">
+          <li>Cryptographically signed evidence (hash + audit trail)</li>
+          <li>Batched anchoring for tamper-evidence</li>
+          <li>Institution-friendly: works with telcos, MFIs, and banks</li>
+        </ul>
+      </div>
 
-    <!-- How It Works Section -->
-    <section id="how-it-works" class="how-it-works">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">How It Works</h2>
-                <p class="section-subtitle">Simple, secure, and transparent</p>
-            </div>
-            <div class="steps">
-                <div class="step">
-                    <div class="step-number">1</div>
-                    <h3 class="step-title">Request Consent</h3>
-                    <p class="step-description">
-                        Create a consent request with clear terms and conditions 
-                        for your users.
-                    </p>
-                </div>
-                <div class="step-connector"></div>
-                <div class="step">
-                    <div class="step-number">2</div>
-                    <h3 class="step-title">User Signs</h3>
-                    <p class="step-description">
-                        Users review and cryptographically sign the consent 
-                        using their private key.
-                    </p>
-                </div>
-                <div class="step-connector"></div>
-                <div class="step">
-                    <div class="step-number">3</div>
-                    <h3 class="step-title">Record Stored</h3>
-                    <p class="step-description">
-                        The signed consent is stored on the blockchain 
-                        with a permanent, verifiable record.
-                    </p>
-                </div>
-                <div class="step-connector"></div>
-                <div class="step">
-                    <div class="step-number">4</div>
-                    <h3 class="step-title">Verify Anytime</h3>
-                    <p class="step-description">
-                        Verify consent authenticity instantly using cryptographic 
-                        verification - no trust required.
-                    </p>
-                </div>
-            </div>
+      <div class="hero__card">
+        <div class="card">
+          <div class="card__header">CVC Evidence Snapshot</div>
+          <div class="kv">
+            <div><span>Gesture challenge</span><code>passed</code></div>
+            <div><span>Device / SIM</span><code>present &amp; bound</code></div>
+            <div><span>Geo &amp; time</span><code>captured</code></div>
+            <div><span>Hash</span><code>0x8fa…9c2a</code></div>
+            <div><span>Anchored</span><code>yes (batched)</code></div>
+          </div>
+          <div class="card__footer note">
+            * We never claim “no central authority needed.” CVC
+            is designed to cooperate with carriers, MFIs &amp; regulators.
+          </div>
         </div>
-    </section>
+      </div>
+    </div>
+  </section>
 
-    <!-- Use Cases Section -->
-    <section id="use-cases" class="use-cases">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Use Cases</h2>
-                <p class="section-subtitle">Powering consent across industries</p>
-            </div>
-            <div class="use-cases-grid">
-                <div class="use-case-card">
-                    <h3 class="use-case-title">Financial Services</h3>
-                    <p class="use-case-description">
-                        Secure consent for data sharing, credit checks, and 
-                        financial transactions with full auditability.
-                    </p>
-                </div>
-                <div class="use-case-card">
-                    <h3 class="use-case-title">Healthcare</h3>
-                    <p class="use-case-description">
-                        HIPAA-compliant consent management for patient data 
-                        sharing and medical research participation.
-                    </p>
-                </div>
-                <div class="use-case-card">
-                    <h3 class="use-case-title">E-Commerce</h3>
-                    <p class="use-case-description">
-                        Transparent consent for marketing, data processing, 
-                        and third-party sharing with user control.
-                    </p>
-                </div>
-                <div class="use-case-card">
-                    <h3 class="use-case-title">Government Services</h3>
-                    <p class="use-case-description">
-                        Verifiable consent for citizen services, identity 
-                        verification, and public benefit programs.
-                    </p>
-                </div>
-            </div>
+  <!-- How it works -->
+  <section id="how-it-works" class="section">
+    <div class="container">
+      <h2 class="section__title">How it works</h2>
+      <div class="grid grid--3">
+        <div class="card">
+          <div class="card__header">1) Challenge</div>
+          <p>
+            User receives a short, randomized gesture prompt. We capture a 10-second liveness
+            video, device info, SIM/app IDs, coarse location, and timestamp.
+          </p>
         </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Get In Touch</h2>
-                <p class="section-subtitle">Ready to transform your consent management?</p>
-            </div>
-            <div class="contact-content">
-                <div class="contact-info">
-                    <h3>Let's Talk</h3>
-                    <p>Whether you're looking to integrate ConsenseTech into your platform or have questions about our technology, we're here to help.</p>
-                    <div class="contact-details">
-                        <div class="contact-item">
-                            <strong>Email:</strong>
-                            <a href="mailto:contact@consensetech.io">contact@consensetech.io</a>
-                        </div>
-                    </div>
-                </div>
-                <form class="contact-form" id="contactForm">
-                    <div class="form-group">
-                        <label for="name">Name</label>
-                        <input type="text" id="name" name="name" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="email">Email</label>
-                        <input type="email" id="email" name="email" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="message">Message</label>
-                        <textarea id="message" name="message" rows="5" required></textarea>
-                    </div>
-                    <button type="submit" class="btn-primary">Send Message</button>
-                </form>
-            </div>
+        <div class="card">
+          <div class="card__header">2) Sign &amp; hash</div>
+          <p>
+            Evidence is signed and hashed. A tamper-evident record is created;
+            hashes are batched for anchoring to provide a durable audit trail.
+          </p>
         </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h4>ConsenseTech</h4>
-                    <p>Secure, decentralized consent management for the modern web.</p>
-                </div>
-                <div class="footer-section">
-                    <h4>Product</h4>
-                    <ul>
-                        <li><a href="#features">Features</a></li>
-                        <li><a href="#how-it-works">How It Works</a></li>
-                        <li><a href="#use-cases">Use Cases</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h4>Company</h4>
-                    <ul>
-                        <li><a href="#contact">Contact</a></li>
-                        <li><a href="#">Privacy Policy</a></li>
-                        <li><a href="#">Terms of Service</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2024 ConsenseTech. All rights reserved.</p>
-            </div>
+        <div class="card">
+          <div class="card__header">3) Verify</div>
+          <p>
+            Relying parties (e.g., telcos, MFIs) verify the record when a transaction is
+            approved, blocked, or disputed—reducing ambiguity and fraud.
+          </p>
         </div>
-    </footer>
+      </div>
+    </div>
+  </section>
 
-    <script src="script.js"></script>
+  <!-- Use cases (only the two you’re piloting) -->
+  <section id="use-cases" class="section">
+    <div class="container">
+      <h2 class="section__title">Use cases</h2>
+      <div class="grid grid--2">
+        <div class="card">
+          <div class="card__header">Fraud prevention (telco &amp; wallet)</div>
+          <p>
+            Step-up verification when internal fraud signals fire. CVC captures
+            human intent with liveness + metadata so high-risk transactions can be
+            approved or blocked with evidence.
+          </p>
+          <ul class="list">
+            <li>High-value wallet transfers</li>
+            <li>SIM swap &amp; device change events</li>
+            <li>Business wallet access delegation</li>
+          </ul>
+        </div>
+        <div class="card">
+          <div class="card__header">SME payroll lending co-op</div>
+          <p>
+            Verified payroll flows + CVC approvals enable faster underwriting and
+            lower defaults. Group guarantees are backed by cryptographic evidence.
+          </p>
+          <ul class="list">
+            <li>Onboard SMEs &amp; workers with CVC</li>
+            <li>Approve/deny loan draws with proof</li>
+            <li>Dispute resolution with audit trail</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="section">
+    <div class="container">
+      <div class="contact card">
+        <div class="card__header">Work with us</div>
+        <form id="contactForm" class="form">
+          <div class="form__row">
+            <label>Name</label>
+            <input type="text" name="name" required />
+          </div>
+          <div class="form__row">
+            <label>Email</label>
+            <input type="email" name="email" required />
+          </div>
+          <div class="form__row">
+            <label>Message</label>
+            <textarea name="message" rows="4" required></textarea>
+          </div>
+          <button class="btn btn--primary" type="submit">Request a call</button>
+          <p id="form-status" class="note" aria-live="polite"></p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <span>© <span id="y"></span> Consense Technologies</span>
+      <span class="muted">Built for institutions. Evidence first.</span>
+    </div>
+  </footer>
+
+  <script src="./script.js"></script>
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
-
