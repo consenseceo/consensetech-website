@@ -1,0 +1,17 @@
+name: consensetech-website
+region: nyc
+static_sites:
+  - name: website
+    github:
+      repo: your-username/consensetech-website
+      branch: main
+      deploy_on_push: true
+    routes:
+      - path: /
+    build_command: ""
+    output_dir: /
+    catchall_document: index.html
+    envs:
+      - key: NODE_ENV
+        value: production
+
