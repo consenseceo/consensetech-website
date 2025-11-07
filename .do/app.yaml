@@ -1,17 +1,23 @@
 name: consensetech-website
-region: nyc
+region: nyc3
 static_sites:
   - name: website
     github:
-      repo: your-username/consensetech-website
+      repo: consenseceo/consensetech-website
       branch: main
       deploy_on_push: true
     routes:
       - path: /
+    # For plain HTML/CSS/JS, leave build_command empty
+    # If you want to use build.js to inject env vars, use: "node build.js"
     build_command: ""
     output_dir: /
     catchall_document: index.html
     envs:
       - key: NODE_ENV
         value: production
+      # Add your Cloud Run service URL here
+      # - key: API_BASE_URL
+      #   value: https://your-cloud-run-service.run.app
+      #   scope: build_time
 

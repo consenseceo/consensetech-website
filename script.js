@@ -48,6 +48,12 @@ window.addEventListener('scroll', () => {
 // Contact Form Handling
 const contactForm = document.getElementById('contactForm');
 
+// Get API base URL from environment variable or meta tag
+// For DigitalOcean static sites, this will be injected at build time
+const API_BASE_URL = window.API_BASE_URL || 
+                     document.querySelector('meta[name="api-base-url"]')?.content ||
+                     'https://your-cloud-run-service.run.app'; // Fallback - replace with your actual URL
+
 if (contactForm) {
     contactForm.addEventListener('submit', async (e) => {
         e.preventDefault();
@@ -59,16 +65,28 @@ if (contactForm) {
             message: formData.get('message')
         };
         
-        // Here you would typically send the data to your backend
-        // For now, we'll just show a success message
         const submitButton = contactForm.querySelector('button[type="submit"]');
         const originalText = submitButton.textContent;
         
         submitButton.textContent = 'Sending...';
         submitButton.disabled = true;
         
-        // Simulate API call
-        setTimeout(() => {
+        try {
+            const response = await fetch(`${API_BASE_URL}/public/contact`, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(data)
+            });
+            
+            if (!response.ok) {
+                throw new Error(`HTTP ${response.status}: ${response.statusText}`);
+            }
+            
+            const result = await response.json().catch(() => ({}));
+            
+            // Success
             submitButton.textContent = 'Message Sent! ✓';
             submitButton.style.background = 'linear-gradient(135deg, #10b981 0%, #059669 100%)';
             
@@ -79,7 +97,17 @@ if (contactForm) {
                 submitButton.disabled = false;
                 submitButton.style.background = '';
             }, 2000);
-        }, 1000);
+        } catch (error) {
+            console.error('Contact form error:', error);
+            submitButton.textContent = 'Error - Try Again';
+            submitButton.style.background = 'linear-gradient(135deg, #ef4444 0%, #dc2626 100%)';
+            
+            setTimeout(() => {
+                submitButton.textContent = originalText;
+                submitButton.disabled = false;
+                submitButton.style.background = '';
+            }, 3000);
+        }
     });
 }
 
