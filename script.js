@@ -52,7 +52,7 @@ const contactForm = document.getElementById('contactForm');
 // For DigitalOcean static sites, this will be injected at build time
 const API_BASE_URL = window.API_BASE_URL || 
                      document.querySelector('meta[name="api-base-url"]')?.content ||
-                     'https://your-cloud-run-service.run.app'; // Fallback - replace with your actual URL
+                     'https://consense-demo-rnkjb3yahq-uw.a.run.app'; // Fallback Cloud Run URL
 
 if (contactForm) {
     contactForm.addEventListener('submit', async (e) => {
