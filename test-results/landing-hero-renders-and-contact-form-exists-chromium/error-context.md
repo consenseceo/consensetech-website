@@ -1,0 +1,95 @@
+# Page snapshot
+
+```yaml
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - generic [ref=e3]:
+      - link "Consense•Tech" [ref=e4] [cursor=pointer]:
+        - /url: "#"
+      - navigation [ref=e5]:
+        - link "How it works" [ref=e6] [cursor=pointer]:
+          - /url: "#how-it-works"
+        - link "Use cases" [ref=e7] [cursor=pointer]:
+          - /url: "#use-cases"
+        - link "Contact" [ref=e8] [cursor=pointer]:
+          - /url: "#contact"
+  - generic [ref=e10]:
+    - generic [ref=e11]:
+      - heading "Court-ready consent for real-world transactions." [level=1] [ref=e12]
+      - paragraph [ref=e13]: Consense Verification Contract (CVC) captures gesture-based liveness, device & location metadata, and signed terms to produce verifiable evidence for approvals, denials, and disputes.
+      - generic [ref=e14]:
+        - link "Talk to us" [ref=e15] [cursor=pointer]:
+          - /url: "#contact"
+        - link "See how it works" [ref=e16] [cursor=pointer]:
+          - /url: "#how-it-works"
+      - list [ref=e17]:
+        - listitem [ref=e18]: Cryptographically signed evidence (hash + audit trail)
+        - listitem [ref=e19]: Batched anchoring for tamper-evidence
+        - listitem [ref=e20]: "Institution-friendly: works with telcos, MFIs, and banks"
+    - generic [ref=e22]:
+      - generic [ref=e23]: CVC Evidence Snapshot
+      - generic [ref=e24]:
+        - generic [ref=e25]:
+          - generic [ref=e26]: Gesture challenge
+          - code [ref=e27]: passed
+        - generic [ref=e28]:
+          - generic [ref=e29]: Device / SIM
+          - code [ref=e30]: present & bound
+        - generic [ref=e31]:
+          - generic [ref=e32]: Geo & time
+          - code [ref=e33]: captured
+        - generic [ref=e34]:
+          - generic [ref=e35]: Hash
+          - code [ref=e36]: 0x8fa…9c2a
+        - generic [ref=e37]:
+          - generic [ref=e38]: Anchored
+          - code [ref=e39]: yes (batched)
+      - generic [ref=e40]: "* We never claim “no central authority needed.” CVC is designed to cooperate with carriers, MFIs & regulators."
+  - generic [ref=e42]:
+    - heading "How it works" [level=2] [ref=e43]
+    - generic [ref=e44]:
+      - generic [ref=e45]:
+        - generic [ref=e46]: 1) Challenge
+        - paragraph [ref=e47]: User receives a short, randomized gesture prompt. We capture a 10-second liveness video, device info, SIM/app IDs, coarse location, and timestamp.
+      - generic [ref=e48]:
+        - generic [ref=e49]: 2) Sign & hash
+        - paragraph [ref=e50]: Evidence is signed and hashed. A tamper-evident record is created; hashes are batched for anchoring to provide a durable audit trail.
+      - generic [ref=e51]:
+        - generic [ref=e52]: 3) Verify
+        - paragraph [ref=e53]: Relying parties (e.g., telcos, MFIs) verify the record when a transaction is approved, blocked, or disputed—reducing ambiguity and fraud.
+  - generic [ref=e55]:
+    - heading "Use cases" [level=2] [ref=e56]
+    - generic [ref=e57]:
+      - generic [ref=e58]:
+        - generic [ref=e59]: Fraud prevention (telco & wallet)
+        - paragraph [ref=e60]: Step-up verification when internal fraud signals fire. CVC captures human intent with liveness + metadata so high-risk transactions can be approved or blocked with evidence.
+        - list [ref=e61]:
+          - listitem [ref=e62]: High-value wallet transfers
+          - listitem [ref=e63]: SIM swap & device change events
+      - generic [ref=e64]:
+        - generic [ref=e65]: Business Suite (Quo-Op)
+        - paragraph [ref=e66]: Quo-Op equips SME payroll cooperatives with verified disbursements and consent evidence. Every batch draw, top-up or repayment request is backed by a CVC record.
+        - list [ref=e67]:
+          - listitem [ref=e68]: Process payroll-backed credit flows with proof
+          - listitem [ref=e69]: Capture approvals/denials with CVC metadata
+          - listitem [ref=e70]: Resolve disputes using the audit trail
+          - listitem [ref=e71]: Business wallet access delegation
+  - generic [ref=e74]:
+    - generic [ref=e75]: Work with us
+    - generic [ref=e76]:
+      - generic [ref=e77]:
+        - generic [ref=e78]: Name
+        - textbox [ref=e79]
+      - generic [ref=e80]:
+        - generic [ref=e81]: Email
+        - textbox [ref=e82]
+      - generic [ref=e83]:
+        - generic [ref=e84]: Message
+        - textbox [ref=e85]
+      - button "Request a call" [ref=e86] [cursor=pointer]
+      - paragraph
+  - contentinfo [ref=e87]:
+    - generic [ref=e88]:
+      - generic [ref=e89]: © 2025 Consense Technologies
+      - generic [ref=e90]: ANCHORING REALITY
+```
